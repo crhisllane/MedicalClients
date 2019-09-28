@@ -14,7 +14,6 @@ class ClienteViewSet(ModelViewSet):
     filter_fields = ('id', 'nome', 'dataNascimento','dataColeta', 'dataEntrega', 'statusEntrega', 'CRM', 'codigoIdentificador')
     #permission_classes = (IsAuthenticatedOrReadOnly,)
     #authentication_classes = (TokenAuthentication,)
-    lookup_field = 'codigoIdentificador'
 
     def get_queryset(self):
         return Cliente.objects.all()
