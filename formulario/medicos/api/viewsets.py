@@ -12,8 +12,8 @@ class MedicoViewSet(ModelViewSet):
     """
     serializer_class = MedicoSerializer
     filter_fields = ('nome', 'CRM')
-    permission_classes = (IsAuthenticatedOrReadOnly,)
-    authentication_classes = (TokenAuthentication,)
+    # permission_classes = (IsAuthenticatedOrReadOnly,)
+    # authentication_classes = (TokenAuthentication,)
     lookup_field = 'CRM'
 
     def get_queryset(self):

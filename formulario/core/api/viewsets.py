@@ -12,8 +12,8 @@ class ClienteViewSet(ModelViewSet):
     """
     serializer_class = ClienteSerializer
     filter_fields = ('id', 'nome', 'dataNascimento','dataColeta', 'dataEntrega', 'statusEntrega', 'CRM', 'codigoIdentificador')
-    permission_classes = (IsAuthenticatedOrReadOnly,)
-    authentication_classes = (TokenAuthentication,)
+    #permission_classes = (IsAuthenticatedOrReadOnly,)
+    #authentication_classes = (TokenAuthentication,)
     lookup_field = 'codigoIdentificador'
 
     def get_queryset(self):
