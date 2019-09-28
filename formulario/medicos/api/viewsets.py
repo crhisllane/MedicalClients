@@ -14,7 +14,6 @@ class MedicoViewSet(ModelViewSet):
     filter_fields = ('nome', 'CRM')
     # permission_classes = (IsAuthenticatedOrReadOnly,)
     # authentication_classes = (TokenAuthentication,)
-    lookup_field = 'CRM'
 
     def get_queryset(self):
         return Medico.objects.all()
