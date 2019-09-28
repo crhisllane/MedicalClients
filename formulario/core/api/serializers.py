@@ -5,7 +5,6 @@ from medicos.api.serializers import MedicoSerializer
 
 
 class ClienteSerializer(ModelSerializer):
-    CRM = MedicoSerializer(many=False)
 
     class Meta:
         model = Cliente
