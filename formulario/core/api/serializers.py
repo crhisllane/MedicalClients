@@ -13,7 +13,7 @@ class ClienteSerializer(ModelSerializer):
                   'dataNascimento',
                   'dataColeta', 
                   'dataEntrega', 
-                  'statusEntrega', 
+                  'dataCadastro', 
                   'codigoIdentificador',
                   'CRM'
                 ]

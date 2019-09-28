@@ -11,10 +11,9 @@ class Cliente(models.Model):
    dataNascimento       = models.DateField('Data de Nascimento')
    dataColeta           = models.DateField('Data da Coleta')
    dataEntrega          = models.DateField('Data da Entrega')
-   statusEntrega        = models.BooleanField('Status da Entrega')
    CRM                  = models.ForeignKey(Medico, related_name='clientes', blank=True, on_delete=models.CASCADE)
    codigoIdentificador  = models.CharField(max_length=100, null=False, unique=True, default=uuid.uuid1)
-   cadastro             = models.DateTimeField(auto_now_add=True)
+   dataCadastro             = models.DateTimeField(auto_now_add=True)
 
    def data_Cadastro (self):
       self.cadastro = timezone.now()
