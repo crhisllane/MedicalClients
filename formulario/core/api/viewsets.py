@@ -11,10 +11,9 @@ class ClienteViewSet(ModelViewSet):
     API endpoint that allows users to be viewed or edited.
     """
     serializer_class = ClienteSerializer
-    filter_fields = ('id', 'nome', 'dataNascimento','dataColeta', 'dataEntrega', 'statusEntrega', 'CRM', 'codigoIdentificador')
-    permission_classes = (IsAuthenticatedOrReadOnly,)
-    authentication_classes = (TokenAuthentication,)
-    lookup_field = 'codigoIdentificador'
+    filter_fields = ('id', 'nome', 'dataNascimento','dataColeta', 'dataEntrega', 'dataCadastro', 'CRM', 'codigoIdentificador')
+    #permission_classes = (IsAuthenticatedOrReadOnly,)
+    #authentication_classes = (TokenAuthentication,)
 
     def get_queryset(self):
         return Cliente.objects.all()
