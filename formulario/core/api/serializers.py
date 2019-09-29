@@ -1,7 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 from rest_framework import fields, serializers
 from core.models import Cliente
-from medicos.api.serializers import MedicoSerializer
 
 
 
